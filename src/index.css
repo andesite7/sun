@@ -6,26 +6,42 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Custom palette for soft tactile backdrop */
-  --color-pagebg: #f4f3ed;
-  --color-cardbg: #faf9f5;
+  /* Custom palette for soft tactile luxurious dark gray backdrop */
+  --color-pagebg: #1a1c1e;
+  --color-cardbg: #25282c;
   
-  /* Soft tactile shadows mirroring real physical board cards */
+  /* Invert default white to slate gray so interactive inputs are dark, elegant and unified */
+  --color-white: #25282c;
+
+  /* Inverted slate scale for seamless dark gray theme transitions without text label breaking */
+  --color-slate-50: #141618;
+  --color-slate-100: #1a1c1e;
+  --color-slate-200: #25282c;
+  --color-slate-300: #363a41;
+  --color-slate-400: #4f5562;
+  --color-slate-500: #798396;
+  --color-slate-650: #9da7b8;
+  --color-slate-600: #9da7b8;
+  --color-slate-700: #c2cbd6;
+  --color-slate-800: #e2e6eb;
+  --color-slate-900: #f5f7fa;
+
+  /* High contrast neon deep tactile shadows with edge highlights for dark mode */
   --shadow-soft-3d: 
-    0 8px 32px -4px rgba(130, 125, 115, 0.08),
-    0 16px 48px -12px rgba(80, 80, 70, 0.04),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
-    0 1px 2px 0 rgba(0, 0, 0, 0.015);
+    0 1px 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 12px 32px -4px rgba(0, 0, 0, 0.8),
+    0 4px 12px -4px rgba(0, 0, 0, 0.6),
+    0 1px 2px 0 rgba(0, 0, 0, 0.4);
   
   --shadow-soft-3d-hover: 
-    0 16px 36px -6px rgba(110, 105, 95, 0.12),
-    0 24px 60px -16px rgba(60, 60, 50, 0.08),
-    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.98),
-    0 2px 4px 0 rgba(0, 0, 0, 0.025);
+    0 1px 2px 0 rgba(255, 255, 255, 0.09) inset,
+    0 24px 48px -8px rgba(0, 0, 0, 0.95),
+    0 8px 20px -6px rgba(0, 0, 0, 0.7),
+    0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
   --shadow-soft-inset:
-    inset 2px 2px 5px 0 rgba(100, 95, 85, 0.06),
-    inset -2px -2px 6px 0 rgba(255, 255, 255, 0.9),
-    0 1px 0px 0 rgba(255, 255, 255, 0.6);
+    inset 0 2px 6px 0 rgba(0, 0, 0, 0.85),
+    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.04),
+    0 1px 0px 0 rgba(255, 255, 255, 0.02);
 }
 

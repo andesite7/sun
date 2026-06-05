@@ -40,7 +40,7 @@ export default function ThreeCanvas({
 
     // 1. Scene & Camera
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xf1f5f9); // Tailwind slate-100/slate-50 background for elegant light appearance
+    scene.background = new THREE.Color(0x25282c); // Beautiful slate-gray cardbg
     sceneRef.current = scene;
 
     const width = containerRef.current.clientWidth || 600;
@@ -379,14 +379,14 @@ export default function ThreeCanvas({
       sunLight.visible = false;
       sunMesh.visible = false;
       if (sceneRef.current) {
-        sceneRef.current.background = new THREE.Color(0x0f172a); // Slate-900 (Night Sky)
+        sceneRef.current.background = new THREE.Color(0x1a1c1e); // Page deep gray background for Night
       }
     } else {
       sunLight.visible = true;
       sunMesh.visible = true;
       sunLight.intensity = Math.min(1.5, Math.max(0.1, Math.sin(altRad) * 1.5));
       if (sceneRef.current) {
-        sceneRef.current.background = new THREE.Color(0xf1f5f9); // Slate-100 (Daylight)
+        sceneRef.current.background = new THREE.Color(0x25282c); // Card gray background for Day
       }
     }
 

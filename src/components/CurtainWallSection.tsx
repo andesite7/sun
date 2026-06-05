@@ -102,12 +102,12 @@ export default function CurtainWallSection({
   const spandrelBottomPartHeight = spandrelHeight / 2;
 
   return (
-    <div className="bg-slate-900 text-slate-100 p-4 rounded-xl border border-slate-800 space-y-4 shadow-md mt-4 transition-all duration-300">
+    <div className="bg-slate-100 text-slate-900 p-4 rounded-xl border border-slate-200/60 space-y-4 shadow-soft-3d mt-4 transition-all duration-300">
       {/* Title & Metadata Headers */}
-      <div className="flex items-center justify-between border-b border-indigo-950/60 pb-2">
+      <div className="flex items-center justify-between border-b border-slate-200/40 pb-2">
         <div className="flex items-center gap-2">
           <Layers size={15} className="text-sky-400 animate-pulse" />
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-700">
             커튼월 실시간 단면 상세도
           </span>
         </div>
@@ -117,7 +117,7 @@ export default function CurtainWallSection({
       </div>
 
       {/* SVG Canvas Workspace */}
-      <div className="relative w-full bg-slate-950 rounded-lg overflow-hidden border border-slate-800 flex flex-col items-center">
+      <div className="relative w-full bg-slate-50 rounded-lg overflow-hidden border border-slate-200/50 flex flex-col items-center">
         {/* Sky Background indicator glow based on absorption / solar variables */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(251,191,36,0.06),transparent_60%)] pointer-events-none" />
 
@@ -433,46 +433,46 @@ export default function CurtainWallSection({
       {/* Dynamic Properties Explanations (Korean) */}
       <div className="grid grid-cols-2 gap-2 text-[10px]">
         {/* Glass System Spec */}
-        <div className="bg-slate-950/60 p-2 rounded border border-slate-800 space-y-1">
+        <div className="bg-slate-50/80 p-2 rounded-lg border border-slate-200/50 space-y-1 shadow-soft-inset">
           <div className="flex items-center gap-1">
             <div className="w-1.5 h-3 bg-sky-400 rounded-sm" />
-            <span className="font-bold text-slate-300">유리 사양 디테일</span>
+            <span className="font-bold text-slate-700">유리 사양 디테일</span>
           </div>
-          <span className="block text-sky-300 font-medium leading-tight">
+          <span className="block text-sky-400 font-medium leading-tight">
             {glassSystem.name}
           </span>
-          <span className="block text-slate-400 text-[9px] leading-none">
-            {glassSystem.gas} • <span className="text-sky-400/80">{glassSystem.efficiency}</span>
+          <span className="block text-slate-500 text-[9px] leading-none">
+            {glassSystem.gas} • <span className="text-sky-450">{glassSystem.efficiency}</span>
           </span>
         </div>
 
         {/* Spandrel Absorption Spec */}
-        <div className="bg-slate-950/60 p-2 rounded border border-slate-800 space-y-1">
+        <div className="bg-slate-50/80 p-2 rounded-lg border border-slate-200/50 space-y-1 shadow-soft-inset">
           <div className="flex items-center gap-1">
             <div 
               className="w-1.5 h-3 rounded-sm transition-colors duration-500" 
               style={{ backgroundColor: spandrel.panelFill, border: `1px solid ${spandrel.panelStroke}` }} 
             />
-            <span className="font-bold text-slate-300">외벽 패널 화학물성</span>
+            <span className="font-bold text-slate-700">외벽 패널 화학물성</span>
           </div>
-          <span className="block text-amber-200 font-medium leading-tight">
+          <span className="block text-amber-400 font-medium leading-tight">
             {spandrel.label} ({Math.round(absorptionCoef * 100)}% α)
           </span>
-          <span className="block text-slate-400 text-[9px] leading-none">
+          <span className="block text-slate-500 text-[9px] leading-none">
             {spandrel.absorbedHeat}
           </span>
         </div>
 
         {/* Shading efficiency */}
-        <div className="bg-slate-950/60 p-2 rounded border border-slate-800 space-y-1 col-span-2">
+        <div className="bg-slate-50/80 p-2 rounded-lg border border-slate-200/50 space-y-1 col-span-2 shadow-soft-inset">
           <div className="flex items-center justify-between text-[9px]">
-            <div className="flex items-center gap-1 text-slate-300 font-bold">
+            <div className="flex items-center gap-1 text-slate-700 font-bold">
               <Sun size={11} className="text-amber-400" />
               <span>차양제어 / 로이 기능</span>
             </div>
-            <span className="text-amber-300 font-bold font-mono">SC: {shadingCoef.toFixed(2)}</span>
+            <span className="text-amber-400 font-bold font-mono">SC: {shadingCoef.toFixed(2)}</span>
           </div>
-          <p className="text-slate-400 text-[9px] leading-relaxed">
+          <p className="text-slate-500 text-[9px] leading-relaxed">
             {getShadingInfo(shadingCoef)}
           </p>
         </div>

@@ -5,17 +5,17 @@ export default function App() {
   return (
     <div className="min-h-screen bg-pagebg flex flex-col font-sans transition-colors duration-500">
       {/* AEC Premium Global Navigation Brand Bar */}
-      <header className="w-full bg-slate-900 text-white px-6 py-4 flex flex-col sm:flex-row items-center justify-between shadow-md border-b border-slate-800">
+      <header className="w-full bg-slate-50 text-slate-900 px-6 py-4 flex flex-col sm:flex-row items-center justify-between shadow-soft-3d border-b border-slate-200">
         <div className="flex items-center gap-2.5">
-          <div className="p-1.5 bg-emerald-500 rounded-lg text-slate-900 shadow-inner">
+          <div className="p-1.5 bg-emerald-500 rounded-lg text-slate-50 shadow-inner">
             <Compass size={18} className="animate-spin" style={{ animationDuration: "12s" }} />
           </div>
           <div>
             <h1 className="text-base font-extrabold tracking-tight flex items-center gap-2">
               AEC-SIM
-              <span className="text-[10px] bg-slate-800 text-emerald-400 font-mono px-1.5 py-0.5 rounded border border-slate-700">v2.4.0 PRO</span>
+              <span className="text-[10px] bg-slate-100 text-emerald-400 font-mono px-1.5 py-0.5 rounded border border-slate-200">v2.4.0 PRO</span>
             </h1>
-            <p className="text-[10px] text-slate-400 font-medium">건축 입면 일사-단열 에너지 물리 3D 시뮬레이션 시스템</p>
+            <p className="text-[10px] text-slate-500 font-medium">건축 입면 일사-단열 에너지 물리 3D 시뮬레이션 시스템</p>
           </div>
         </div>
 
@@ -29,11 +29,11 @@ export default function App() {
             </span>
           </div>
 
-          <div className="h-6 w-px bg-slate-800 hidden sm:block"></div>
+          <div className="h-6 w-px bg-slate-200 hidden sm:block"></div>
 
           <div className="flex items-center gap-2">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="text-[11px] font-bold text-slate-200">System Connected</span>
+            <span className="text-[11px] font-bold text-slate-800">System Connected</span>
           </div>
         </div>
       </header>
